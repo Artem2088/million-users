@@ -11,3 +11,4 @@
         - concurrently,
         - RTK Query 
 
+##P.S. проект находится в разработке
