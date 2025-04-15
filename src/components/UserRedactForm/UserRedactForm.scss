@@ -1,0 +1,28 @@
+.user-redact {
+    
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+.redact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: flex-start;
+    background-color: rgba(128,128,128, .1);
+
+    &__input {
+        width: 100%;
+        max-height: 1.875rem;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+    }
+}

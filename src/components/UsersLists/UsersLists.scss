@@ -1,0 +1,13 @@
+@use '../../utils/variables.scss';
+
+.users-lists {
+    display: flex;
+    flex-direction: column;
+    row-gap: .625rem;
+    font-size: variables.$font-size;
+    line-height: variables.$line-height;
+    font-style: normal;
+    font-weight: 400;
+    height: 100%;
+    overflow: auto;
+}

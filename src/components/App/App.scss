@@ -1,0 +1,15 @@
+@use '../../utils/variables' as vars;
+
+.page {
+    font-family: vars.$font-stack;
+    display: flex;
+    min-height: 100vh;
+    height: 100%;
+    
+    &__container {
+        display: flex;
+        flex-direction: column;
+        max-width: 120rem;
+        width: 100%;
+    }
+}

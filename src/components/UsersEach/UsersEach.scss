@@ -1,0 +1,24 @@
+@use '../../utils/variables.scss';
+
+.user {
+    display: inline-flex;
+    padding-block: .625rem;
+    padding-inline: .3125rem;
+    background-color: variables.$user-backgraund;
+
+    &__image {
+        max-width: .9375rem;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    &__name {
+        margin-left: .9375rem;
+    }
+
+    &:hover {
+        opacity: .7;
+        cursor: pointer;
+    }
+}
