@@ -1,10 +1,10 @@
 import { UsersLists } from "../index";
 import "./Sidebar.scss";
 
-const Sidebar = () => {
+const Sidebar = ({setIsTarget}) => {
   return (
     <section className="sidebar">
-      <UsersLists />
+      <UsersLists setIsTarget={setIsTarget}/>
     </section>
   )
 }

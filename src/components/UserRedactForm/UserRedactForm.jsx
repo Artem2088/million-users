@@ -1,20 +1,62 @@
 import "./UserRedactForm.scss";
 
-const UserRedactForm = () => {
+const UserRedactForm = ({user}) => {
+
   return (
-    <section className="user-redact">
+    <section className={user.length > 1 ? "user-redact" : "user-redact.open"}>
       <div className="user-redact__container">
-        <h3>Редактирование информации сотрудника</h3>
-        <form action="" className="user-redact__form redact-form">
-          <label htmlFor="">Имя</label>
-          <input type="text" placeholder="Имя" className="redact-form__input"/>
-          <label htmlFor="">Подразделение</label>
-          <input type="text" placeholder="Подразделение" className="redact-form__input"/>
-          <label htmlFor="">Компания</label>
-          <input type="text" placeholder="Компания" className="redact-form__input"/>
-          <label htmlFor="">Должность</label>
-          <input type="text" placeholder="Должность" className="redact-form__input"/>
-          <button>Отправить</button>
+        <form
+          className="user-redact__form redact-form"
+          name=""
+        >
+          <h3 className="user-redact__title">
+            Редактирование информации сотрудника
+          </h3>
+          <fieldset className="user-redact__fieldset">
+            <input
+              className="redact-form__input"
+              id="place-name"
+              name="name"
+              placeholder="Имя"
+              minLength="2"
+              maxLength="30"
+              autoComplete="off"
+              value={user.name}
+            />
+            <input
+              className="redact-form__input"
+              id="place-department"
+              name="department"
+              placeholder="Подразделение"
+              minLength="2"
+              maxLength="30"
+              autoComplete="off"
+              value={user.department}
+            />
+            <input
+              className="redact-form__input"
+              id="place-company"
+              name="company"
+              placeholder="Компания"
+              minLength="2"
+              maxLength="30"
+              autoComplete="off"
+              value={user.company}
+            />
+            <input
+              className="redact-form__input"
+              id="place-jobTitle"
+              name="jobTitle"
+              placeholder="Должность"
+              minLength="2"
+              maxLength="30"
+              autoComplete="off"
+              value={user.jobTitle}
+            />
+          </fieldset>
+          <button className="redact-form__submit" type="submit" title="Создать" disabled="">
+            Редактировать
+          </button>
         </form>
       </div>
     </section>
